@@ -14,7 +14,7 @@ while read p; do
 	if [[ ! -z "${p}" ]]
 	then
 		printf "\nUnlocking %s...\n" "${p}"
-		git lfs unlock ${p}
+		git lfs unlock "${p}"
 	fi
 done <locks.txt
 rm ./locks.txt
